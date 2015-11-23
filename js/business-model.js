@@ -20,6 +20,7 @@
       'customer-centric',
       'lean',
       'next generation',
+      'cross-platform',
     ],
     noun: [
       'alignment',
@@ -71,15 +72,14 @@
       'aggregator',
       'agile',
       'ajax',
-      'algorithm',
-      'back-end',
+      'algorithms',
+      'back-ends',
       'big data',
       'blogs',
       'clickthroughs',
-      'cloud',
+      'the cloud',
       'content management',
       'cms',
-      'cross-platform',
       'data science',
       'design pattern',
       'devops',
@@ -153,24 +153,42 @@
     verb: []
   };
 
-  window.t = types;
-
-
-  function getWord (kind) {
+  /*
+   * Chooses a random buzzword of type, then checks to see if it was used already.
+   * If so, recursively picks another until a free one has been chosen.
+   */
+  var buzzword = function(kind) {
     var word;
+
+    // Don't get an error of that kind of word doesn't exist.
     if (!types.hasOwnProperty(kind)) {
-      return "";
+      return '';
     }
+
+    // If we've used all the words, empty the array and feel free to use them again.
+    if (types[kind].length >= used[kind].length) {
+      used[kind] = [];
+    }
+
+    // Get random word
     word = types[kind][Math.floor(Math.random()*types[kind].length)];
 
+    // Ensure word was not used
     if (used[kind].indexOf(word) === -1) {
       used[kind].push(word);
       return word;
     }
-    return getWord(kind);
-  }
 
-  var sentence = 'Providing ' + getWord('noun') + ' to ' + getWord('adjective') + ' ' + getWord('noun') + ' by ' + getWord('verb') + ' ' + getWord('noun') + '.';
-  var h3 = document.getElementById('business-model');
-  h3.innerText = sentence;
+    // But if it was, grab another.
+    return buzzword(kind);
+  };
+
+  var init = function() {
+    var sentence = 'Providing ' + buzzword('noun') + ' to ' + buzzword('adjective') + ' ' + buzzword('noun') + ' by ' + buzzword('verb') + ' ' + buzzword('noun') + '.';
+    var h3 = document.getElementById('business-model');
+    h3.innerText = sentence;
+  };
+
+  init();
+
 }());
