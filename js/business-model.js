@@ -1,0 +1,176 @@
+(function() {
+  var types = {
+    adjective: [
+      'proactive',
+      'robust',
+      'client-centric',
+      'mission critical',
+      'seamless',
+      'beta',
+      'bleeding edge',
+      'streamlined',
+      'real-time',
+      'responsive',
+      'skeuomorphic',
+      'social',
+      'viral',
+      'granular',
+      'next generation',
+      'crowdsourced',
+      'customer-centric',
+      'lean',
+      'next generation',
+    ],
+    noun: [
+      'alignment',
+      'buzzwords',
+      'clear goals',
+      'disruptive innovation',
+      'empowerment',
+      'exit strategies',
+      'functional training',
+      'face time',
+      'globalization',
+      'a holistic approach',
+      'impact',
+      'milestone',
+      'organic growth',
+      'paradigms',
+      'paradigm shifts',
+      'sea change',
+      'survival strategies',
+      'sustainability',
+      'synergy',
+      'synergy', // It's that important
+      'wellness',
+      'win-win scenarios',
+      'analytics',
+      'bandwidth',
+      'best practices',
+      'brands',
+      'cloud computing',
+      'content marketing',
+      'core competency',
+      'enterprise',
+      'event horizons',
+      'free values',
+      'fulfilment issues',
+      'guard rails',
+      'logistics',
+      'quick-wins',
+      'win-wins',
+      'return on investment',
+      'social currency',
+      'solutions',
+      'sustainability',
+      'startups',
+      'strategies',
+      'touchpoints',
+      'added value',
+      'visibility',
+      'aggregator',
+      'agile',
+      'ajax',
+      'algorithm',
+      'back-end',
+      'big data',
+      'blogs',
+      'clickthroughs',
+      'cloud',
+      'content management',
+      'cms',
+      'cross-platform',
+      'data science',
+      'design pattern',
+      'devops',
+      'digital divide',
+      'digital rights management',
+      'disruptive technology',
+      'e-learning',
+      'engine',
+      'framework',
+      'fuzzy logic',
+      'html5',
+      'immersion',
+      'innovation',
+      'mashup',
+      'mobile',
+      'modularity',
+      'nanotechnology',
+      'an MVP',
+      'paas',
+      'podcasts',
+      'portals',
+      'saas',
+      'workflows',
+      'rest services',
+      'valuation',
+      'scalability',
+      'microservices',
+      'churn rates',
+      'conversion rates',
+      'angel investing',
+      'seed capital',
+      'incubators',
+      'IPO',
+      'PoC',
+      'Valuation',
+      'NodeJS',
+      'functional programming',
+      'traction',
+      'viral mechanics',
+
+    ],
+    verb: [
+      'growing',
+      'impacting',
+      'leveraging',
+      'relaying',
+      'spining-up',
+      'streamlining',
+      'deep diving',
+      'downsizing',
+      'enabling',
+      'integrating',
+      'leveraging',
+      'offshoring',
+      'socializing',
+      'teeing off',
+      'benchmarking',
+      'collaborating',
+      'crowdsourcing',
+      'data mining',
+      'tagging',
+      'virtualizing',
+      '3-d printing',
+      'pivoting',
+      'deep diving'
+    ]
+  },
+  used = {
+    noun: [],
+    adjective: [],
+    verb: []
+  };
+
+  window.t = types;
+
+
+  function getWord (kind) {
+    var word;
+    if (!types.hasOwnProperty(kind)) {
+      return "";
+    }
+    word = types[kind][Math.floor(Math.random()*types[kind].length)];
+
+    if (used[kind].indexOf(word) === -1) {
+      used[kind].push(word);
+      return word;
+    }
+    return getWord(kind);
+  }
+
+  var sentence = 'Providing ' + getWord('noun') + ' to ' + getWord('adjective') + ' ' + getWord('noun') + ' by ' + getWord('verb') + ' ' + getWord('noun') + '.';
+  var h3 = document.getElementById('business-model');
+  h3.innerText = sentence;
+}());
