@@ -18,9 +18,12 @@
       'next generation',
       'crowdsourced',
       'customer-centric',
-      'lean',
+      'lean development processes',
       'next generation',
       'cross-platform',
+      'adaptable',
+      'reliable',
+      'standardized',
     ],
     noun: [
       'alignment',
@@ -118,7 +121,9 @@
       'functional programming',
       'traction',
       'viral mechanics',
-
+      'platform as a service',
+      'development environment',
+      'platform',
     ],
     verb: [
       'growing',
@@ -143,7 +148,9 @@
       'virtualizing',
       '3-d printing',
       'pivoting',
-      'deep diving'
+      'deep diving',
+      'scaling',
+      'build and deploying'
     ]
   },
   used = {
