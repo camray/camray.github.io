@@ -190,7 +190,7 @@
   };
 
   var init = function() {
-    var sentence = 'Providing ' + buzzword('noun') + ' to ' + buzzword('adjective') + ' ' + buzzword('noun') + ' by ' + buzzword('verb') + ' ' + buzzword('noun') + '.';
+    var sentence = buzzword('verb') + ' ' + buzzword('noun') + ' to ' + buzzword('adjective') + ' ' + buzzword('noun') + ' by ' + buzzword('verb') + ' ' + buzzword('noun') + '.';
     var h3 = document.getElementById('business-model');
     h3.innerText = sentence;
   };
