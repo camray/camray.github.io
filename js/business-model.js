@@ -188,9 +188,13 @@
     // But if it was, grab another.
     return buzzword(kind);
   };
+  
+  String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+  }
 
   var init = function() {
-    var sentence = buzzword('verb') + ' ' + buzzword('noun') + ' to ' + buzzword('adjective') + ' ' + buzzword('noun') + ' by ' + buzzword('verb') + ' ' + buzzword('noun') + '.';
+    var sentence = buzzword('verb').capitalize() + ' ' + buzzword('noun') + ' to ' + buzzword('adjective') + ' ' + buzzword('noun') + ' by ' + buzzword('verb') + ' ' + buzzword('noun') + '.';
     var h3 = document.getElementById('business-model');
     h3.innerText = sentence;
   };
