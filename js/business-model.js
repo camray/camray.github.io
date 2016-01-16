@@ -193,11 +193,25 @@
     return this.charAt(0).toUpperCase() + this.slice(1);
   }
 
-  var init = function() {
-    var sentence = buzzword('verb').capitalize() + ' ' + buzzword('noun') + ' to ' + buzzword('adjective') + ' ' + buzzword('noun') + ' by ' + buzzword('verb') + ' ' + buzzword('noun') + '.';
+  var generateSentance = function() {
+    return 'Providing ' + buzzword('noun') + ' to ' + buzzword('adjective') + ' ' + buzzword('noun') + ' by ' + buzzword('verb') + ' ' + buzzword('noun') + '.';
+  };
+
+
+  function updateBusinessModel(sentence) {
     var h3 = document.getElementById('business-model');
     h3.innerText = sentence;
+  }
+
+  var init = function() {
+    updateBusinessModel(generateSentance());
+
+    document.getElementById('not_satisfied').addEventListener('click', function() {
+      updateBusinessModel(generateSentance());
+    });
+
   };
+
 
   init();
 
