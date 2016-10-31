@@ -27,7 +27,7 @@
     ],
     noun: [
       'alignment',
-      'buzzwords',
+      'buzzwords', // So meta
       'clear goals',
       'disruptive innovation',
       'empowerment',
@@ -81,7 +81,6 @@
       'clickthroughs',
       'the cloud',
       'content management',
-      'cms',
       'data science',
       'design pattern',
       'devops',
@@ -89,7 +88,6 @@
       'digital rights management',
       'disruptive technology',
       'e-learning',
-      'engine',
       'framework',
       'fuzzy logic',
       'html5',
@@ -124,6 +122,11 @@
       'platform as a service',
       'development environment',
       'platform',
+      'deep learning',
+      'artificial intelligence',
+      'millenials',
+      'internet of things',
+      'wearables'
     ],
     verb: [
       'growing',
@@ -148,7 +151,6 @@
       'virtualizing',
       '3-d printing',
       'pivoting',
-      'deep diving',
       'scaling',
       'build and deploying'
     ]
@@ -188,7 +190,7 @@
     // But if it was, grab another.
     return buzzword(kind);
   };
-  
+
   String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
   }
