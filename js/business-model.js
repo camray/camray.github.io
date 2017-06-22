@@ -11,7 +11,6 @@
       'streamlined',
       'real-time',
       'responsive',
-      'skeuomorphic',
       'social',
       'viral',
       'granular',
@@ -24,6 +23,9 @@
       'adaptable',
       'reliable',
       'standardized',
+      'organic',
+      'multichannel',
+      'agile'
     ],
     noun: [
       'alignment',
@@ -90,7 +92,6 @@
       'e-learning',
       'framework',
       'fuzzy logic',
-      'html5',
       'immersion',
       'innovation',
       'mashup',
@@ -128,7 +129,12 @@
       'internet of things',
       'wearables',
       'best-in-class',
-      'go-to-market'
+      'go-to-market',
+      'content curation',
+      'engagement',
+      'keyword',
+      'user flow',
+      'AWS'
     ],
     verb: [
       'growing',
@@ -155,7 +161,12 @@
       'pivoting',
       'scaling',
       'build and deploying',
-      'facilitating'
+      'facilitating',
+      'revitalizing',
+      'engaging',
+      'embedding',
+      'growth-hacking',
+      'operationalize'
     ]
   },
   used = {
