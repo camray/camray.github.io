@@ -25,7 +25,8 @@
       'standardized',
       'organic',
       'multichannel',
-      'agile'
+      'agile',
+      'native'
     ],
     noun: [
       'alignment',
@@ -134,7 +135,9 @@
       'engagement',
       'keyword',
       'user flow',
-      'AWS'
+      'AWS',
+      'augmented reality',
+      'blockchain'
     ],
     verb: [
       'growing',
