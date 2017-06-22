@@ -126,7 +126,9 @@
       'artificial intelligence',
       'millenials',
       'internet of things',
-      'wearables'
+      'wearables',
+      'best-in-class',
+      'go-to-market'
     ],
     verb: [
       'growing',
@@ -152,7 +154,8 @@
       '3-d printing',
       'pivoting',
       'scaling',
-      'build and deploying'
+      'build and deploying',
+      'facilitating'
     ]
   },
   used = {
