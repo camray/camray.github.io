@@ -116,7 +116,6 @@
       'incubators',
       'IPO',
       'PoC',
-      'Valuation',
       'NodeJS',
       'functional programming',
       'traction',
