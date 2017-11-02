@@ -136,7 +136,8 @@
       'user flow',
       'AWS',
       'augmented reality',
-      'blockchain'
+      'blockchain',
+      'bitcoin'
     ],
     verb: [
       'growing',
@@ -159,7 +160,7 @@
       'data mining',
       'tagging',
       'virtualizing',
-      '3-d printing',
+      '3D printing',
       'pivoting',
       'scaling',
       'build and deploying',
