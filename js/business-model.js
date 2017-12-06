@@ -212,7 +212,7 @@
     return this.charAt(0).toUpperCase() + this.slice(1);
   }
 
-  var generateSentance = function() {
+  var generateSentence = function() {
     return buzzword('verb').capitalize() + ' ' + buzzword('noun') + ' to ' + buzzword('adjective') + ' ' + buzzword('noun') + ' by ' + buzzword('verb') + ' ' + buzzword('noun') + '.';
   };
 
@@ -223,10 +223,10 @@
   }
 
   var init = function() {
-    updateBusinessModel(generateSentance());
+    updateBusinessModel(generateSentence());
 
     document.getElementById('not_satisfied').addEventListener('click', function() {
-      updateBusinessModel(generateSentance());
+      updateBusinessModel(generateSentence());
     });
 
   };
